@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tarik Kelestemur</title>
+    <link>http://kelestemur.com/</link>
+    <description>Recent content on Tarik Kelestemur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Mar 2020 13:24:16 -0400</lastBuildDate>
+    
+	<atom:link href="http://kelestemur.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello</title>
+      <link>http://kelestemur.com/blog/hello/</link>
+      <pubDate>Mon, 16 Mar 2020 20:36:48 -0400</pubDate>
+      
+      <guid>http://kelestemur.com/blog/hello/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
