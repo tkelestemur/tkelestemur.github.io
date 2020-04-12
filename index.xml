@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tarik Kelestemur</title>
-    <link>http://kelestemur.com/</link>
+    <link>https://kelestemur.com/</link>
     <description>Recent content on Tarik Kelestemur</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Mar 2020 13:24:16 -0400</lastBuildDate>
     
-	<atom:link href="http://kelestemur.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kelestemur.com/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
