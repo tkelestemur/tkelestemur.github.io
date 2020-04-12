@@ -11,14 +11,5 @@
 	<atom:link href="http://kelestemur.com/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Hello</title>
-      <link>http://kelestemur.com/blog/hello/</link>
-      <pubDate>Mon, 16 Mar 2020 20:36:48 -0400</pubDate>
-      
-      <guid>http://kelestemur.com/blog/hello/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
