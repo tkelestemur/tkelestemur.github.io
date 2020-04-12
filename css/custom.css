@@ -1,0 +1,16 @@
+img {
+    margin: 5px 15px 10px 0px;
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    max-width: 900px;
+}
+
+.header .site-description nav ul svg {
+  height: 30px;
+  width: 45px;
+  max-height: 30px;
+  margin-top: -10px;
+}
