@@ -1,3 +1,11 @@
+body {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+}
+
 img {
     margin: 5px 15px 10px 0px;
     max-width: 100%;
