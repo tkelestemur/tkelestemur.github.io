@@ -1,4 +1,4 @@
-baseurl = "https://tkelestemur.github.io"
+baseurl = "http://kelestemur.com"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
