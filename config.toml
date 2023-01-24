@@ -5,7 +5,7 @@ paginate = 5
 
 [params]
   contentTypeName = ""
-  themeColor = "orange"
+  themeColor = "blue"
   showMenuItems = 5
   fullWidthTheme = false
   centerTheme = false
