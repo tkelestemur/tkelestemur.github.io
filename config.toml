@@ -1,4 +1,4 @@
-baseurl = "http://kelestemur.com"
+baseurl = "https://kelestemur.com"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
