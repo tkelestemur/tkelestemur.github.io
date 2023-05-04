@@ -6,9 +6,9 @@ paginate = 5
 [params]
   contentTypeName = ""
   themeColor = "blue"
-  showMenuItems = 5
+  showMenuItems = 6
   fullWidthTheme = false
-  centerTheme = false
+  centerTheme = true
 
 [languages]
   [languages.en]
@@ -36,6 +36,10 @@ paginate = 5
         identifier = "github"
         name = "Github"
         url = "https://github.com/tkelestemur"
+      [[languages.en.menu.main]]
+              identifier = "linkedin"
+              name = "LinkedIn"
+              url = "https://www.linkedin.com/in/tkelestemur/"
       [[languages.en.menu.main]]
         identifier = "twitter"
         name = "Twitter"
