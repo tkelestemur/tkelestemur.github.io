@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarik Kelestemur - Roboticist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <section class="profile">
+            <div class="profile-image">
+                <!-- Replace with your image -->
+                <img src="tarik.jpg" alt="Your Name">
+            </div>
+            <div class="profile-content">
+                <h1>Tarik Kelestemur</h1>
+                <p class="title">Roboticist at Robotics and AI Institute</p>
+                <p class="bio">
+                    I am an Applied Scientist at Boston Dynamics AI Institute. Previously I was a Machine Learning Engineer at Covariant AI working on AI-powered real world robotics. I received my PhD degree in Computer Engineering from Northeastern University where I worked under the supervision of Prof. Taskin Padir Prof. Robert Platt and Prof. David Rosen. During my Ph.D., I worked at the intersection of machine learning and robotic manipulation. Specifically, I was interested in combining classical and data-driven methods for visual and tactile manipulation. Previously, I was a Masters student working with Prof. Taskin Padir on mobile manipulation and grasping.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/tkelestemur" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/kelestemur" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://twitter.com/tarikkelestemur" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications">
+            <h2>Publications</h2>
+            <div id="publications-container">
+                <!-- Papers will be loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        async function loadPapers() {
+            try {
+                console.log('Attempting to load papers...');
+                const response = await fetch('papers.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const papersByYear = await response.json();
+                console.log('Loaded papers:', papersByYear);
+
+                const container = document.getElementById('publications-container');
+                if (!container) {
+                    throw new Error('Could not find publications-container element');
+                }
+
+                const years = Object.keys(papersByYear);
+                if (years.length === 0) {
+                    throw new Error('No papers found in papers.json');
+                }
+                console.log('Found years:', years);
+                
+                // Sort years in descending order
+                const sortedYears = years.sort((a, b) => b - a);
+                console.log('Years sorted:', sortedYears);
+                
+                sortedYears.forEach(year => {
+                    // Create year section
+                    const yearSection = document.createElement('div');
+                    yearSection.className = 'year-section';
+                    yearSection.innerHTML = `<h3 class="year-header">${year}</h3>`;
+                    
+                    // Add papers for this year
+                    papersByYear[year].forEach(paper => {
+                        const paperElement = document.createElement('div');
+                        paperElement.className = 'publication';
+                        paperElement.innerHTML = `
+                            <div class="pub-content">
+                                <h3>${paper.title}</h3>
+                                <p class="authors">${paper.authors.join(', ')}</p>
+                                <p class="venue">${paper.venue || ''}</p>
+                                <div class="pub-links">
+                                    ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank">PDF</a>` : ''}
+                                    ${paper.scholar_url ? `<a href="${paper.scholar_url}" class="paper-link" target="_blank">Scholar</a>` : ''}
+                                    ${paper.citations ? `<span class="citations">Citations: ${paper.citations}</span>` : ''}
+                                </div>
+                            </div>
+                        `;
+                        yearSection.appendChild(paperElement);
+                    });
+                    
+                    container.appendChild(yearSection);
+                });
+            } catch (error) {
+                console.error('Detailed error:', error);
+                console.error('Error stack:', error.stack);
+                const container = document.getElementById('publications-container');
+                if (container) {
+                    container.innerHTML = `<p style="color: #ff6b6b;">Error loading publications: ${error.message}</p>`;
+                }
+            }
+        }
+
+        // Load papers when the page loads
+        window.addEventListener('load', loadPapers);
+    </script>
+</body>
+</html> 
