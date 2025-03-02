@@ -10,11 +10,13 @@
         "Yunzhu Li"
       ],
       "year": 2025,
-      "venue": "",
+      "venue": "Under Review",
       "url": "https://arxiv.org/abs/2501.13338",
       "citations": 0,
       "scholar_url": "",
-      "figure": "2025_CuriousBot_Interactive_Mobile_Exploration_via_Actionable_3D_Relational_Object_Graph.png"
+      "video_url": "https://www.youtube.com/watch?v=1fK9-OrSwpQ",
+      "website_url": "https://bdaiinstitute.github.io/curiousbot",
+      "figure": "images/curiousbot.png"
     }
   ],
   "2024": [
@@ -30,14 +32,16 @@
         "Laura Herlant"
       ],
       "year": 2024,
-      "venue": "",
+      "venue": "CoRL 2024",
       "url": "https://arxiv.org/abs/2407.20179",
       "citations": 12,
       "scholar_url": "",
-      "figure": "2024_Theia_Distilling_diverse_vision_foundation_models_for_robot_learning.png"
+      "video_url": "",
+      "website_url": "https://theia.theaiinstitute.com/",
+      "figure": "images/theia.png"
     },
     {
-      "title": "Equivariant diffusion policy",
+      "title": "Equivariant Diffusion Policy",
       "authors": [
         "Dian Wang",
         "Stephen Hart",
@@ -51,11 +55,13 @@
         "Robert Platt"
       ],
       "year": 2024,
-      "venue": "",
+      "venue": "CoRL 2024",
       "url": "https://arxiv.org/abs/2407.01812",
       "citations": 10,
       "scholar_url": "",
-      "figure": "2024_Equivariant_diffusion_policy.png"
+      "video_url": "https://www.youtube.com/watch?v=xIFSx_NVROU",
+      "website_url": "https://equidiff.github.io/",
+      "figure": "images/curiousbot.png"
     },
     {
       "title": "GenDP: 3D Semantic Fields for Category-Level Generalizable Diffusion Policy",
@@ -68,14 +74,16 @@
         "Yunzhu Li"
       ],
       "year": 2024,
-      "venue": "",
+      "venue": "CoRL 2024",
       "url": "https://robopil.github.io/GenDP/media/supp.pdf",
       "citations": 7,
       "scholar_url": "",
-      "figure": "2024_GenDP_3D_Semantic_Fields_for_CategoryLevel_Generalizable_Diffusion_Policy.png"
+      "video_url": "https://www.youtube.com/watch?v=6jUGmUaAEOc&feature=youtu.be&themeRefresh=1",
+      "website_url": "https://robopil.github.io/GenDP/",
+      "figure": "images/gendp.mp4"
     },
     {
-      "title": "D  Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Rearrangement",
+      "title": "D^3Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Rearrangement",
       "authors": [
         "Yixuan Wang",
         "Mingtong Zhang",
@@ -87,11 +95,13 @@
         "Yunzhu Li"
       ],
       "year": 2024,
-      "venue": "",
+      "venue": "CoRL 2024",
       "url": "https://arxiv.org/abs/2309.16118",
       "citations": 4,
       "scholar_url": "",
-      "figure": "2024_D__Fields_Dynamic_3D_Descriptor_Fields_for_ZeroShot_Generalizable_Rearrangement.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/d3fields.gif"
     },
     {
       "title": "On-Robot Reinforcement Learning with Goal-Contrastive Rewards",
@@ -107,48 +117,13 @@
         "Lawson LS Wong"
       ],
       "year": 2024,
-      "venue": "",
+      "venue": "ICRA 2024",
       "url": "https://arxiv.org/abs/2410.19989",
       "citations": 0,
       "scholar_url": "",
-      "figure": "2024_OnRobot_Reinforcement_Learning_with_GoalContrastive_Rewards.png"
-    },
-    {
-      "title": "GILD: Generalizable Imitation Learning with 3D Semantic Fields",
-      "authors": [
-        "Yixuan Wang",
-        "Binghao Huang",
-        "Guang Yin",
-        "Tarik Kelestemur",
-        "Yunzhu Li"
-      ],
-      "year": 2024,
-      "venue": "",
-      "url": "https://openreview.net/forum?id=0uqtPtPB0i",
-      "citations": 0,
-      "scholar_url": "",
-      "figure": "2024_GILD_Generalizable_Imitation_Learning_with_3D_Semantic_Fields.png"
-    }
-  ],
-  "2023": [
-    {
-      "title": "Systems and Methods for Robotic Grippers With Fiber Optic Spectroscopy",
-      "authors": [
-        "Taskin Padir",
-        "Akshay Vaidya",
-        "Hillel Hochsztein",
-        "Nathaniel Hanson",
-        "Kristen Dorsey",
-        "Joel B Willick",
-        "Tarik Kelestemur",
-        "Deniz Erdogmus"
-      ],
-      "year": 2023,
-      "venue": "",
-      "url": "https://patents.google.com/patent/US20230249368A1/en",
-      "citations": 1,
-      "scholar_url": "",
-      "figure": "2023_Systems_and_Methods_for_Robotic_Grippers_With_Fiber_Optic_Spectroscopy.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     }
   ],
   "2022": [
@@ -160,11 +135,13 @@
         "Taskin Padir"
       ],
       "year": 2022,
-      "venue": "",
+      "venue": "AAMAS 2022",
       "url": "https://arxiv.org/abs/2203.10685",
       "citations": 32,
       "scholar_url": "",
-      "figure": "2022_Tactile_pose_estimation_and_policy_learning_for_unknown_object_manipulation.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     },
     {
       "title": "Pregrasp object material classification by a novel gripper design with integrated spectroscopy",
@@ -175,11 +152,13 @@
         "Taskin Padir"
       ],
       "year": 2022,
-      "venue": "",
+      "venue": "Arxiv",
       "url": "https://arxiv.org/abs/2207.00942",
       "citations": 7,
       "scholar_url": "",
-      "figure": "2022_Pregrasp_object_material_classification_by_a_novel_gripper_design_with_integrated_spectroscopy.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     },
     {
       "title": "Hyperbot-a benchmarking testbed for acquisition of robot-centric hyperspectral scene and in-hand object data",
@@ -191,26 +170,13 @@
         "Taskin Padir"
       ],
       "year": 2022,
-      "venue": "",
+      "venue": "WHISPERS",
       "url": "https://ieeexplore.ieee.org/abstract/document/9955133/",
       "citations": 4,
       "scholar_url": "",
-      "figure": "2022_Hyperbota_benchmarking_testbed_for_acquisition_of_robotcentric_hyperspectral_scene_and_inhand_object_data.png"
-    },
-    {
-      "title": "Learning Prior Mean Function for Gaussian Process Implicit Surfaces",
-      "authors": [
-        "Tarik Kelestemur",
-        "Taskin Padir",
-        "Robert Platt",
-        "David Rosen"
-      ],
-      "year": 2022,
-      "venue": "",
-      "url": "",
-      "citations": 0,
-      "scholar_url": "",
-      "figure": "2022_Learning_Prior_Mean_Function_for_Gaussian_Process_Implicit_Surfaces.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     }
   ],
   "2021": [
@@ -218,95 +184,91 @@
       "title": "Telemanipulation via virtual reality interfaces with enhanced environment models",
       "authors": [
         "Murphy Wonsick",
-        "Tar\u0131k Kele\u0219temur",
+        "Tarık Keleştemur",
         "Stephen Alt",
-        "Ta\u0219k\u0131n Pad\u0131r"
+        "Taşkın Padır"
       ],
       "year": 2021,
-      "venue": "",
+      "venue": "IROS 2021",
       "url": "https://ieeexplore.ieee.org/abstract/document/9636005/",
       "citations": 21,
       "scholar_url": "",
-      "figure": "2021_Telemanipulation_via_virtual_reality_interfaces_with_enhanced_environment_models.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     },
     {
       "title": "Policy Learning for Visually Conditioned Tactile Manipulation",
       "authors": [
-        "Tar\u0131k Kele\u015ftemur",
-        "Ta\u015fk\u0131n Pad\u0131r",
+        "Tarık Keleştemur",
+        "Taşkın Padır",
         "Robert Platt"
       ],
       "year": 2021,
-      "venue": "",
+      "venue": "IROS 2021",
       "url": "https://ieeexplore.ieee.org/abstract/document/9636866/",
       "citations": 1,
       "scholar_url": "",
-      "figure": "2021_Policy_Learning_for_Visually_Conditioned_Tactile_Manipulation.png"
-    },
-    {
-      "title": "Policy Learning for Visually Conditioned Tactile Manipulation",
-      "authors": [
-        "Tarik Kelestemur",
-        "Taskin Padir",
-        "Robert Platt"
-      ],
-      "year": 2021,
-      "venue": "",
-      "url": "https://par.nsf.gov/servlets/purl/10318980",
-      "citations": 0,
-      "scholar_url": "",
-      "figure": "2021_Policy_Learning_for_Visually_Conditioned_Tactile_Manipulation.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     }
   ],
   "2020": [
     {
       "title": "Learning bayes filter models for tactile localization",
       "authors": [
-        "Tar\u0131k Kele\u015ftemur",
+        "Tarık Keleştemur",
         "Colin Keil",
         "John P Whitney",
         "Robert Platt",
-        "Ta\u015fk\u0131n Pad\u0131r"
+        "Taşkın Padır"
       ],
       "year": 2020,
-      "venue": "",
+      "venue": "IROS 2020",
       "url": "https://ieeexplore.ieee.org/abstract/document/9341420/",
       "citations": 5,
       "scholar_url": "",
-      "figure": "2020_Learning_bayes_filter_models_for_tactile_localization.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     }
   ],
   "2019": [
     {
       "title": "System architecture for autonomous mobile manipulation of everyday objects in domestic environments",
       "authors": [
-        "Tarik Kele\u015ftemur",
+        "Tarik Keleştemur",
         "Naoki Yokoyama",
         "Joanne Truong",
         "Anas Abou Allaban",
-        "Ta\u015fkin Padir"
+        "Taşkin Padir"
       ],
       "year": 2019,
-      "venue": "",
+      "venue": "PeTRA 2019",
       "url": "https://dl.acm.org/doi/abs/10.1145/3316782.3316797",
       "citations": 17,
       "scholar_url": "",
-      "figure": "2019_System_architecture_for_autonomous_mobile_manipulation_of_everyday_objects_in_domestic_environments.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     },
     {
       "title": "Optimization-Based Human-in-the-Loop Manipulation Using Joint Space Polytopes",
       "authors": [
         "Philip Long",
-        "Tarik Kele\u015ftemur",
-        "Aykut \u00d6zg\u00fcn \u00d6nol",
-        "Ta\u015fkin Padir"
+        "Tarik Keleştemur",
+        "Aykut Özgün Önol",
+        "Taşkin Padir"
       ],
       "year": 2019,
-      "venue": "",
+      "venue": "ICRA 2019",
       "url": "https://ieeexplore.ieee.org/abstract/document/8794071/",
       "citations": 9,
       "scholar_url": "",
-      "figure": "2019_OptimizationBased_HumanintheLoop_Manipulation_Using_Joint_Space_Polytopes.png"
+      "video_url": "",
+      "website_url": "",
+      "figure": "images/curiousbot.png"
     }
   ]
 }

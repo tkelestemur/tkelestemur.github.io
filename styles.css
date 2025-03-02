@@ -1,192 +1,345 @@
+:root {
+  --primary-color: #2d3748;
+  --secondary-color: #4299e1;
+  --background-color: #ffffff;
+  --text-color: #1a202c;
+  --light-gray: #e2e8f0;
+  --dark-gray: #718096;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #e0e0e0;
-    background-color: #1a1a1a;
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 /* Profile Section */
 .profile {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    background: #2d2d2d;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    border: 1px solid #3d3d3d;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.profile-image {
+  flex-shrink: 0;
 }
 
 .profile-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--light-gray);
+  transition: var(--transition);
+}
+
+.profile-image img:hover {
+  transform: scale(1.03);
+  border-color: var(--secondary-color);
 }
 
 .profile-content {
-    flex: 1;
+  flex: 1;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #60a5fa;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }
 
 .title {
-    font-size: 1.2rem;
-    color: #94a3b8;
-    margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .bio {
-    margin-bottom: 1.5rem;
-    color: #e0e0e0;
+  font-size: 1rem;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
 }
 
 .social-links {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1.2rem;
 }
 
 .social-links a {
-    color: #60a5fa;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+  transition: var(--transition);
 }
 
 .social-links a:hover {
-    color: #93c5fd;
+  color: var(--secondary-color);
+  transform: translateY(-3px);
 }
 
 /* Publications Section */
-.publications {
-    background: #2d2d2d;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    border: 1px solid #3d3d3d;
+.publications h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-gray);
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #60a5fa;
+/* Add style for the all-publications container */
+.all-publications {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .publication {
-    display: block;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #3d3d3d;
+  display: flex;
+  gap: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 0.4rem 1.0rem;
+  margin-bottom: 0; /* Remove bottom margin as we're using gap */
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  align-items: center;
 }
 
-.publication:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+.pub-image {
+  flex: 0 0 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 220;
+  overflow: hidden;
+}
+
+.pub-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+  background-color: white;
+  transition: var(--transition);
+}
+
+.publication:hover .pub-image img {
+  transform: scale(1.05);
 }
 
 .pub-content {
-    flex: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
 }
 
-h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #60a5fa;
+.pub-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+  line-height: 1.4;
 }
 
 .authors {
-    color: #94a3b8;
-    margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  margin-bottom: 0.4rem;
+}
+
+.venue {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 1.2rem;
+  padding-left: 0.1rem;
+  opacity: 0.9;
 }
 
 .pub-links {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .paper-link {
-    text-decoration: none;
-    color: #60a5fa;
-    padding: 0.3rem 1rem;
-    border: 1px solid #60a5fa;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    background: transparent;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: rgba(66, 153, 225, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: var(--transition);
 }
 
 .paper-link:hover {
-    background: #60a5fa;
-    color: #1a1a1a;
+  background-color: rgba(66, 153, 225, 0.2);
+}
+
+.paper-link[href*="github"] {
+  background-color: rgba(36, 41, 46, 0.1);
+}
+
+.paper-link[href*="youtube"], 
+.paper-link[href*="vimeo"] {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Use a class-based approach instead */
+.paper-link.website-link {
+  background-color: rgba(16, 185, 129, 0.1); /* A subtle green background */
+}
+
+.citations {
+  font-size: 0.85rem;
+  color: var(--dark-gray);
+}
+
+/* Add these new hover styles */
+.paper-link[href*="youtube"]:hover, 
+.paper-link[href*="vimeo"]:hover {
+  background-color: rgba(255, 0, 0, 0.2); /* Darker red on hover */
+}
+
+.paper-link.website-link:hover {
+  background-color: rgba(16, 185, 129, 0.2); /* Darker green on hover */
+}
+
+/* Optional: Add slight transform effect on hover for all links */
+.paper-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-image {
-        margin: 0 auto;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .publication {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .pub-thumbnail {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 1rem;
-    }
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-/* Year sections */
-.year-section {
-    margin-bottom: 2rem;
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+  }
+  
+  .publication {
+    padding: 0.6rem 1rem;
+  }
 }
 
-.year-header {
-    font-size: 1.8rem;
-    color: #94a3b8;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #3d3d3d;
+/* Responsive adjustments for publications with images */
+@media (max-width: 600px) {
+  .publication {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pub-image {
+    width: 100%;
+    height: 250px;
+    max-width: none;
+  }
+  
+  .pub-image img {
+    max-height: 250px;
+  }
+  
+  .pub-content {
+    min-height: auto;
+    padding: 1rem 0 0.5rem;
+  }
 }
 
-.venue {
-    color: #94a3b8;
-    font-style: italic;
-    margin-bottom: 1rem;
+/* Video styling */
+.pub-video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+  background-color: white;
+  transition: var(--transition);
+  cursor: pointer;
+  display: block;
 }
 
-.citations {
-    color: #94a3b8;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    background: rgba(96, 165, 250, 0.1);
+.publication:hover .pub-video {
+  transform: scale(1.05);
+}
+
+/* Add a play button indicator on videos */
+.pub-image {
+  position: relative;
+}
+
+.pub-image video:before {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pub-image video:hover:before {
+  opacity: 1;
 } 

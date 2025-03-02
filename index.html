@@ -6,31 +6,34 @@
     <title>Tarik Kelestemur - Roboticist</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="container">
         <section class="profile">
             <div class="profile-image">
-                <!-- Replace with your image -->
-                <img src="tarik.jpg" alt="Your Name">
+                <img src="tarik.jpg" alt="Tarik Kelestemur">
             </div>
             <div class="profile-content">
                 <h1>Tarik Kelestemur</h1>
-                <p class="title">Roboticist at Robotics and AI Institute</p>
+                <p class="title">Roboticist at Boston Dynamics AI Institute</p>
                 <p class="bio">
-                    I am an Applied Scientist at Boston Dynamics AI Institute. Previously I was a Machine Learning Engineer at Covariant AI working on AI-powered real world robotics. I received my PhD degree in Computer Engineering from Northeastern University where I worked under the supervision of Prof. Taskin Padir Prof. Robert Platt and Prof. David Rosen. During my Ph.D., I worked at the intersection of machine learning and robotic manipulation. Specifically, I was interested in combining classical and data-driven methods for visual and tactile manipulation. Previously, I was a Masters student working with Prof. Taskin Padir on mobile manipulation and grasping.
+                    I am an Applied Scientist at Boston Dynamics AI Institute. Previously I was a Machine Learning Engineer at Covariant AI working on AI-powered real world robotics. I received my PhD degree in Computer Engineering from Northeastern University where I worked under the supervision of Prof. Taskin Padir, Prof. Robert Platt and Prof. David Rosen. During my Ph.D., I worked at the intersection of machine learning and robotic manipulation. Specifically, I was interested in combining classical and data-driven methods for visual and tactile manipulation.
                 </p>
                 <div class="social-links">
-                    <a href="https://github.com/tkelestemur" target="_blank">
+                    <a href="https://github.com/tkelestemur" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/kelestemur" target="_blank">
+                    <a href="https://linkedin.com/in/kelestemur" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank">
+                    <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" aria-label="Google Scholar">
                         <i class="fas fa-graduation-cap"></i>
                     </a>
-                    <a href="https://twitter.com/tarikkelestemur" target="_blank">
+                    <a href="https://twitter.com/tarikkelestemur" target="_blank" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -40,7 +43,10 @@
         <section class="publications">
             <h2>Publications</h2>
             <div id="publications-container">
-                <!-- Papers will be loaded here -->
+                <!-- Publications will load here -->
+                <div class="loading-indicator">
+                    <i class="fas fa-circle-notch fa-spin"></i> Loading publications...
+                </div>
             </div>
         </section>
     </div>
@@ -61,6 +67,12 @@
                     throw new Error('Could not find publications-container element');
                 }
 
+                // Remove the loading indicator
+                const loadingIndicator = container.querySelector('.loading-indicator');
+                if (loadingIndicator) {
+                    loadingIndicator.remove();
+                }
+
                 const years = Object.keys(papersByYear);
                 if (years.length === 0) {
                     throw new Error('No papers found in papers.json');
@@ -71,45 +83,98 @@
                 const sortedYears = years.sort((a, b) => b - a);
                 console.log('Years sorted:', sortedYears);
                 
+                // Create a single container for all publications instead of year sections
+                const allPublicationsContainer = document.createElement('div');
+                allPublicationsContainer.className = 'all-publications';
+                
+                // Combine all papers from all years into a single array
+                const allPapers = [];
                 sortedYears.forEach(year => {
-                    // Create year section
-                    const yearSection = document.createElement('div');
-                    yearSection.className = 'year-section';
-                    yearSection.innerHTML = `<h3 class="year-header">${year}</h3>`;
-                    
-                    // Add papers for this year
                     papersByYear[year].forEach(paper => {
-                        const paperElement = document.createElement('div');
-                        paperElement.className = 'publication';
-                        paperElement.innerHTML = `
-                            <div class="pub-content">
-                                <h3>${paper.title}</h3>
-                                <p class="authors">${paper.authors.join(', ')}</p>
-                                <p class="venue">${paper.venue || ''}</p>
-                                <div class="pub-links">
-                                    ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank">PDF</a>` : ''}
-                                    ${paper.scholar_url ? `<a href="${paper.scholar_url}" class="paper-link" target="_blank">Scholar</a>` : ''}
-                                    ${paper.citations ? `<span class="citations">Citations: ${paper.citations}</span>` : ''}
-                                </div>
-                            </div>
-                        `;
-                        yearSection.appendChild(paperElement);
+                        // Add the year to the paper object for reference if needed
+                        paper.year = year;
+                        allPapers.push(paper);
                     });
-                    
-                    container.appendChild(yearSection);
                 });
+                
+                // Add all papers to the container
+                allPapers.forEach(paper => {
+                    console.log("Paper data:", paper);
+                    
+                    const paperElement = document.createElement('div');
+                    paperElement.className = 'publication';
+                    
+                    let videoUrl = paper.video_url || '';
+                    let websiteUrl = paper.website_url || '';
+
+                    // Determine media type and create appropriate element
+                    let mediaHtml = '';
+                    if (paper.figure) {
+                        const fileExtension = paper.figure.split('.').pop().toLowerCase();
+                        
+                        if (fileExtension === 'gif') {
+                            // For GIFs - they autoplay by default
+                            mediaHtml = `<div class="pub-image">
+                                <img src="${paper.figure}" alt="${paper.title}" onerror="this.src='placeholder-paper.jpg';">
+                            </div>`;
+                        } else if (fileExtension === 'mp4') {
+                            // For MP4 videos - now with autoplay like GIFs
+                            mediaHtml = `<div class="pub-image">
+                                <video 
+                                    src="${paper.figure}" 
+                                    autoplay
+                                    muted 
+                                    loop 
+                                    playsinline
+                                    class="pub-video"
+                                    poster="placeholder-paper.jpg"
+                                    onclick="this.paused ? this.play() : this.pause()"
+                                ></video>
+                            </div>`;
+                        } else {
+                            // For regular images
+                            mediaHtml = `<div class="pub-image">
+                                <img src="${paper.figure}" alt="${paper.title}" onerror="this.src='placeholder-paper.jpg';">
+                            </div>`;
+                        }
+                    } else {
+                        // Fallback placeholder
+                        mediaHtml = `<div class="pub-image">
+                            <img src="placeholder-paper.jpg" alt="Publication thumbnail">
+                        </div>`;
+                    }
+
+                    paperElement.innerHTML = `
+                        ${mediaHtml}
+                        <div class="pub-content">
+                            <h3>${paper.title}</h3>
+                            <p class="authors">${paper.authors.join(', ')}</p>
+                            <p class="venue">${paper.venue || ''}</p>
+                            <div class="pub-links">
+                                ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank">PDF</a>` : ''}
+                                ${paper.code_url ? `<a href="${paper.code_url}" class="paper-link" target="_blank">Code</a>` : ''}
+                                ${videoUrl ? `<a href="${videoUrl}" class="paper-link" target="_blank">Video</a>` : ''}
+                                ${websiteUrl ? `<a href="${websiteUrl}" class="paper-link website-link" target="_blank">Website</a>` : ''}
+                                ${paper.scholar_url ? `<a href="${paper.scholar_url}" class="paper-link" target="_blank">Scholar</a>` : ''}
+                            </div>
+                        </div>
+                    `;
+                    allPublicationsContainer.appendChild(paperElement);
+                });
+                
+                container.appendChild(allPublicationsContainer);
             } catch (error) {
                 console.error('Detailed error:', error);
                 console.error('Error stack:', error.stack);
                 const container = document.getElementById('publications-container');
                 if (container) {
+                    // Clear loading indicator and show error message
                     container.innerHTML = `<p style="color: #ff6b6b;">Error loading publications: ${error.message}</p>`;
                 }
             }
         }
 
-        // Load papers when the page loads
-        window.addEventListener('load', loadPapers);
+        loadPapers();
     </script>
 </body>
-</html> 
+</html>
