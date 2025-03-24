@@ -1,12 +1,15 @@
 :root {
   --primary-color: #2d3748;
-  --secondary-color: #4299e1;
-  --background-color: #ffffff;
+  --secondary-color: #3182ce;
+  --accent-color: #38b2ac;
+  --background-color: #f7fafc;
+  --card-background: #ffffff;
   --text-color: #1a202c;
   --light-gray: #e2e8f0;
   --dark-gray: #718096;
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition: all 0.3s ease;
 }
 
@@ -16,18 +19,68 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-primary);
   color: var(--text-color);
   background-color: var(--background-color);
   line-height: 1.6;
   font-size: 16px;
+  padding-top: 60px;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--card-background);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  padding: 0.8rem 0;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--dark-gray);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
 }
 
 /* Profile Section */
@@ -36,6 +89,10 @@ body {
   align-items: flex-start;
   gap: 3rem;
   margin-bottom: 4rem;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
 }
 
 .profile-image {
@@ -50,6 +107,7 @@ body {
   box-shadow: var(--shadow);
   border: 3px solid var(--light-gray);
   transition: var(--transition);
+  filter: brightness(1.05);
 }
 
 .profile-image img:hover {
@@ -99,12 +157,29 @@ h1 {
 }
 
 /* Publications Section */
+.publications {
+  background-color: transparent;
+  padding-top: 1.5rem;
+}
+
 .publications h2 {
   font-size: 1.8rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--light-gray);
+  position: relative;
+  display: inline-block;
+}
+
+.publications h2:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 60px;
+  background-color: var(--secondary-color);
 }
 
 /* Add style for the all-publications container */
@@ -117,13 +192,19 @@ h1 {
 .publication {
   display: flex;
   gap: 1.5rem;
-  background-color: #f8fafc;
-  border-radius: 8px;
-  padding: 0.4rem 1.0rem;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
   margin-bottom: 0; /* Remove bottom margin as we're using gap */
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
   transition: var(--transition);
   align-items: center;
+  border-left: 4px solid transparent;
+}
+
+.publication:hover {
+  transform: translateY(-3px);
+  border-left: 4px solid var(--secondary-color);
 }
 
 .pub-image {
@@ -133,8 +214,10 @@ h1 {
   justify-content: center;
   position: relative;
   width: 300px;
-  height: 220;
+  height: 220px;
   overflow: hidden;
+  border-radius: 8px;
+  background-color: #f8fafc;
 }
 
 .pub-image img {
@@ -143,9 +226,8 @@ h1 {
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 4px;
-  border: 1px solid var(--light-gray);
-  background-color: white;
+  border-radius: 6px;
+  background-color: transparent;
   transition: var(--transition);
 }
 
@@ -162,10 +244,11 @@ h1 {
 }
 
 .pub-content h3 {
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-bottom: 0.8rem;
   color: var(--primary-color);
   line-height: 1.4;
+  font-weight: 600;
 }
 
 .authors {
@@ -196,9 +279,12 @@ h1 {
   font-size: 0.9rem;
   font-weight: 500;
   background-color: rgba(66, 153, 225, 0.1);
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .paper-link:hover {
@@ -242,11 +328,16 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+  
   .profile {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1.5rem;
+    padding: 1.5rem;
   }
   
   .social-links {
@@ -256,6 +347,10 @@ h1 {
   .profile-image img {
     width: 150px;
     height: 150px;
+  }
+  
+  .nav-links {
+    gap: 1rem;
   }
 }
 
@@ -307,9 +402,8 @@ h1 {
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 4px;
-  border: 1px solid var(--light-gray);
-  background-color: white;
+  border-radius: 6px;
+  background-color: transparent;
   transition: var(--transition);
   cursor: pointer;
   display: block;
@@ -342,4 +436,83 @@ h1 {
 
 .pub-image video:hover:before {
   opacity: 1;
-} 
+}
+
+/* Footer */
+.footer {
+  background-color: var(--card-background);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--light-gray);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer p {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--dark-gray);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+  
+  .footer-content {
+    padding: 0 1rem;
+  }
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  background-color: var(--accent-color);
+}

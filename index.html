@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWH1M7QYBM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PWH1M7QYBM');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarik Kelestemur - Roboticist</title>
@@ -12,8 +21,19 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Tarik Kelestemur</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="https://github.com/tkelestemur" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <section class="profile">
+        <section id="about" class="profile">
             <div class="profile-image">
                 <img src="tarik.jpg" alt="Tarik Kelestemur">
             </div>
@@ -40,7 +60,7 @@
             </div>
         </section>
 
-        <section class="publications">
+        <section id="publications" class="publications">
             <h2>Publications</h2>
             <div id="publications-container">
                 <!-- Publications will load here -->
@@ -50,6 +70,30 @@
             </div>
         </section>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Tarik Kelestemur. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/tkelestemur" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/kelestemur" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" aria-label="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="https://twitter.com/tarikkelestemur" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script>
         async function loadPapers() {
@@ -115,7 +159,7 @@
                         if (fileExtension === 'gif') {
                             // For GIFs - they autoplay by default
                             mediaHtml = `<div class="pub-image">
-                                <img src="${paper.figure}" alt="${paper.title}" onerror="this.src='placeholder-paper.jpg';">
+                                <img src="${paper.figure}" alt="${paper.title}" onerror="this.src='images/default-paper-thumbnail.jpg';">
                             </div>`;
                         } else if (fileExtension === 'mp4') {
                             // For MP4 videos - now with autoplay like GIFs
@@ -127,20 +171,20 @@
                                     loop 
                                     playsinline
                                     class="pub-video"
-                                    poster="placeholder-paper.jpg"
+                                    poster="images/default-paper-thumbnail.jpg"
                                     onclick="this.paused ? this.play() : this.pause()"
                                 ></video>
                             </div>`;
                         } else {
                             // For regular images
                             mediaHtml = `<div class="pub-image">
-                                <img src="${paper.figure}" alt="${paper.title}" onerror="this.src='placeholder-paper.jpg';">
+                                <img src="${paper.figure}" alt="${paper.title}" onerror="this.src='images/default-paper-thumbnail.jpg';">
                             </div>`;
                         }
                     } else {
                         // Fallback placeholder
                         mediaHtml = `<div class="pub-image">
-                            <img src="placeholder-paper.jpg" alt="Publication thumbnail">
+                            <img src="images/default-paper-thumbnail.jpg" alt="Publication thumbnail">
                         </div>`;
                     }
 
@@ -151,11 +195,11 @@
                             <p class="authors">${paper.authors.join(', ')}</p>
                             <p class="venue">${paper.venue || ''}</p>
                             <div class="pub-links">
-                                ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank">PDF</a>` : ''}
-                                ${paper.code_url ? `<a href="${paper.code_url}" class="paper-link" target="_blank">Code</a>` : ''}
-                                ${videoUrl ? `<a href="${videoUrl}" class="paper-link" target="_blank">Video</a>` : ''}
-                                ${websiteUrl ? `<a href="${websiteUrl}" class="paper-link website-link" target="_blank">Website</a>` : ''}
-                                ${paper.scholar_url ? `<a href="${paper.scholar_url}" class="paper-link" target="_blank">Scholar</a>` : ''}
+                                ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>` : ''}
+                                ${paper.code_url ? `<a href="${paper.code_url}" class="paper-link" target="_blank"><i class="fab fa-github"></i> Code</a>` : ''}
+                                ${videoUrl ? `<a href="${videoUrl}" class="paper-link" target="_blank"><i class="fas fa-video"></i> Video</a>` : ''}
+                                ${websiteUrl ? `<a href="${websiteUrl}" class="paper-link website-link" target="_blank"><i class="fas fa-globe"></i> Website</a>` : ''}
+                                ${paper.scholar_url ? `<a href="${paper.scholar_url}" class="paper-link" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>` : ''}
                             </div>
                         </div>
                     `;
@@ -175,6 +219,17 @@
         }
 
         loadPapers();
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
     </script>
 </body>
 </html>
