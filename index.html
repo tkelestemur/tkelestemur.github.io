@@ -61,7 +61,7 @@
         </section>
 
         <section id="publications" class="publications">
-            <h2>Publications</h2>
+            <h2>Selected Publications</h2>
             <div id="publications-container">
                 <!-- Publications will load here -->
                 <div class="loading-indicator">
@@ -136,6 +136,9 @@
                             break;
                         case 'figure':
                             paper.figure = value;
+                            break;
+                        case 'note':
+                            paper.note = value;
                             break;
                         default:
                             break;
@@ -224,6 +227,7 @@
                             <h3>${paper.title || ''}</h3>
                             ${paper.authors && paper.authors.length ? `<p class="authors">${paper.authors.join(', ')}</p>` : ''}
                             ${paper.venue ? `<p class="venue">${paper.venue}</p>` : ''}
+                            ${paper.note ? `<p class="pub-note">${paper.note}</p>` : ''}
                             <div class="pub-links">
                                 ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>` : ''}
                                 ${paper.code_url ? `<a href="${paper.code_url}" class="paper-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>` : ''}

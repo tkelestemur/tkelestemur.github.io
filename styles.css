@@ -276,9 +276,15 @@ h1 {
   font-style: italic;
   font-size: 0.9rem;
   color: var(--dark-gray);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.4rem;
   padding-left: 0.1rem;
   opacity: 0.9;
+}
+
+.pub-note {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.2rem;
 }
 
 .pub-links {
