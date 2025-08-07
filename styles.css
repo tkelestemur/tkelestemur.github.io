@@ -23,6 +23,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Ensure in-page anchors account for fixed navbar */
+section[id] {
+  scroll-margin-top: 70px;
+}
+
+/***** Accessibility: focus styles *****/
+:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  border-radius: 6px;
+}
+
 body {
   font-family: var(--font-primary);
   color: var(--text-color);
