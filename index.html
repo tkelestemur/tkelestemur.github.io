@@ -9,91 +9,95 @@
         gtag('js', new Date());
         gtag('config', 'G-PWH1M7QYBM');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tarik Kelestemur — Roboticist. Publications, research, and projects in robotics and AI.">
-    <title>Tarik Kelestemur - Appliedt Scientist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Tarik Kelestemur — Applied Scientist. Publications, research, and projects in robotics and AI.">
+    <title>Tarik Kelestemur — Applied Scientist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Markdown parser -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="logo">Tarik Kelestemur</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#publications">Publications</a>
+    <div class="page">
+        <aside class="terminal-nav">
+            <div class="nav-brand">
+                <span class="prompt">tarik@kelestemur</span>
+                <span class="cursor">~</span>
             </div>
-        </div>
-    </nav>
+            <nav class="nav-menu">
+                <button type="button" class="nav-item" data-target="about"><span class="token">01</span> about</button>
+                <button type="button" class="nav-item" data-target="news"><span class="token">02</span> news</button>
+                <button type="button" class="nav-item" data-target="publications"><span class="token">03</span> publications</button>
+            </nav>
+            <div class="contact-panel">
+                <h2 class="contact-heading">contact</h2>
+                <ul class="contact-list">
+                    <li>
+                        <a class="contact-icon" href="https://github.com/tkelestemur" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-icon" href="https://linkedin.com/in/kelestemur" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-icon" href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span class="sr-only">Google Scholar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-icon" href="https://twitter.com/tarikkelestemur" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-icon" href="mailto:tarik@kelestemur.com" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
 
-    <div class="container">
-        <section id="about" class="profile">
-            <div class="profile-image">
-                <img src="tarik.jpg" alt="Tarik Kelestemur" loading="lazy" decoding="async">
-            </div>
-            <div class="profile-content">
-                <h1>Tarik Kelestemur</h1>
-                <p class="title">Applied Scientist at Robotics and AI Institute</p>
-                <div class="bio"></div>
-                <div class="social-links">
-                    <a href="https://github.com/tkelestemur" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/kelestemur" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" aria-label="Google Scholar" rel="noopener noreferrer">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://twitter.com/tarikkelestemur" target="_blank" aria-label="Twitter" rel="noopener noreferrer">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+        <main class="terminal-main">
+            <section id="about" class="terminal-section">
+                <div class="about-wrap">
+                    <div class="profile-photo">
+                        <img src="tarik.jpg" alt="Tarik Kelestemur">
+                    </div>
+                    <div class="about-body">
+                        <h1>Tarik Kelestemur</h1>
+                        <div class="bio"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="publications" class="publications">
-            <h2>Selected Publications</h2>
-            <div id="publications-container">
-                <!-- Publications will load here -->
-                <div class="loading-indicator">
-                    <i class="fas fa-circle-notch fa-spin"></i> Loading publications...
+            <section id="news" class="terminal-section">
+                <h2>News</h2>
+                <div id="news-container" class="news-feed">
+                    <div class="loading-indicator">loading log…</div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section id="publications" class="terminal-section">
+                <h2>Publications</h2>
+                <div id="publications-container" class="publication-feed">
+                    <div class="loading-indicator">loading publications…</div>
+                </div>
+            </section>
+        </main>
     </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© 2024 Tarik Kelestemur. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/tkelestemur" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/kelestemur" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" aria-label="Google Scholar" rel="noopener noreferrer">
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
-                <a href="https://twitter.com/tarikkelestemur" target="_blank" aria-label="Twitter" rel="noopener noreferrer">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
 
     <script>
         function parsePapersMarkdown(md) {
@@ -134,11 +138,11 @@
                         case 'scholar':
                             paper.scholar_url = value;
                             break;
-                        case 'figure':
-                            paper.figure = value;
-                            break;
                         case 'note':
                             paper.note = value;
+                            break;
+                        case 'figure':
+                            paper.figure = value;
                             break;
                         default:
                             break;
@@ -147,6 +151,39 @@
                 if (paper.title) papers.push(paper);
             });
             return papers;
+        }
+
+        function createPublicationFigure(paper) {
+            if (!paper.figure) return null;
+            const container = document.createElement('div');
+            container.className = 'publication-figure';
+
+            const figurePath = paper.figure.split(/[?#]/)[0];
+            const ext = figurePath.split('.').pop().toLowerCase();
+
+            if (ext === 'mp4') {
+                const video = document.createElement('video');
+                video.src = paper.figure;
+                video.loop = true;
+                video.muted = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                video.setAttribute('poster', 'images/default-paper-thumbnail.jpg');
+                video.setAttribute('aria-label', `${paper.title || 'Publication'} clip`);
+                container.appendChild(video);
+            } else {
+                const img = document.createElement('img');
+                img.src = paper.figure;
+                img.alt = paper.title ? `${paper.title} figure` : 'Publication figure';
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.onerror = () => {
+                    img.src = 'images/default-paper-thumbnail.jpg';
+                };
+                container.appendChild(img);
+            }
+
+            return container;
         }
 
         async function loadIntroMarkdown() {
@@ -166,6 +203,42 @@
             }
         }
 
+        async function loadNewsMarkdown() {
+            try {
+                const container = document.getElementById('news-container');
+                if (!container) return;
+                const res = await fetch('news.md?cb=' + Date.now());
+                if (!res.ok) throw new Error('Failed to load news.md');
+                const md = await res.text();
+                const lines = md.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+                if (!lines.length) {
+                    container.innerHTML = '<p class="empty-state">No updates yet.</p>';
+                    return;
+                }
+                const latest = lines.slice(-5).reverse();
+                const list = document.createElement('ul');
+                list.className = 'news-list';
+                latest.forEach(entry => {
+                    const item = document.createElement('li');
+                    item.className = 'news-item';
+                    if (window.marked && window.marked.parseInline) {
+                        item.innerHTML = marked.parseInline(entry);
+                    } else {
+                        item.textContent = entry;
+                    }
+                    list.appendChild(item);
+                });
+                container.innerHTML = '';
+                container.appendChild(list);
+            } catch (err) {
+                console.error('Failed to load news:', err);
+                const container = document.getElementById('news-container');
+                if (container) {
+                    container.innerHTML = `<p class="error-state">Error loading news: ${err.message}</p>`;
+                }
+            }
+        }
+
         async function loadPapersFromMarkdown() {
             try {
                 const container = document.getElementById('publications-container');
@@ -176,93 +249,162 @@
                 const mdText = await response.text();
                 const papers = parsePapersMarkdown(mdText);
 
-                // Remove the loading indicator
-                const loadingIndicator = container.querySelector('.loading-indicator');
-                if (loadingIndicator) loadingIndicator.remove();
+                container.innerHTML = '';
 
-                const allPublicationsContainer = document.createElement('div');
-                allPublicationsContainer.className = 'all-publications';
+                if (!papers.length) {
+                    container.innerHTML = '<p class="empty-state">No publications found.</p>';
+                    return;
+                }
+
+                const list = document.createElement('div');
+                list.className = 'publications-list';
 
                 papers.forEach(paper => {
-                    const paperElement = document.createElement('div');
+                    const paperElement = document.createElement('article');
                     paperElement.className = 'publication';
 
-                    const videoUrl = paper.video_url || '';
-                    const websiteUrl = paper.website_url || '';
+                    const body = document.createElement('div');
+                    body.className = 'publication-body';
 
-                    let mediaHtml = '';
-                    if (paper.figure) {
-                        const fileExtension = paper.figure.split('.').pop().toLowerCase();
-                        if (fileExtension === 'gif') {
-                            mediaHtml = `<div class="pub-image">
-                                <img src="${paper.figure}" alt="${paper.title}" loading="lazy" decoding="async" onerror="this.src='images/default-paper-thumbnail.jpg';">
-                            </div>`;
-                        } else if (fileExtension === 'mp4') {
-                            mediaHtml = `<div class="pub-image">
-                                <video 
-                                    src="${paper.figure}" 
-                                    autoplay
-                                    muted 
-                                    loop 
-                                    playsinline
-                                    class="pub-video"
-                                    poster="images/default-paper-thumbnail.jpg"
-                                    onclick="this.paused ? this.play() : this.pause()"
-                                ></video>
-                            </div>`;
-                        } else {
-                            mediaHtml = `<div class="pub-image">
-                                <img src="${paper.figure}" alt="${paper.title}" loading="lazy" decoding="async" onerror="this.src='images/default-paper-thumbnail.jpg';">
-                            </div>`;
-                        }
-                    } else {
-                        mediaHtml = `<div class="pub-image">
-                            <img src="images/default-paper-thumbnail.jpg" alt="Publication thumbnail" loading="lazy" decoding="async">
-                        </div>`;
+                    const figure = createPublicationFigure(paper);
+                    if (figure) {
+                        body.appendChild(figure);
                     }
 
-                    paperElement.innerHTML = `
-                        ${mediaHtml}
-                        <div class="pub-content">
-                            <h3>${paper.title || ''}</h3>
-                            ${paper.authors && paper.authors.length ? `<p class="authors">${paper.authors.join(', ')}</p>` : ''}
-                            ${paper.venue ? `<p class="venue">${paper.venue}</p>` : ''}
-                            ${paper.note ? `<p class="pub-note">${paper.note}</p>` : ''}
-                            <div class="pub-links">
-                                ${paper.url ? `<a href="${paper.url}" class="paper-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>` : ''}
-                                ${paper.code_url ? `<a href="${paper.code_url}" class="paper-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>` : ''}
-                                ${videoUrl ? `<a href="${videoUrl}" class="paper-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-video"></i> Video</a>` : ''}
-                                ${websiteUrl ? `<a href="${websiteUrl}" class="paper-link website-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Website</a>` : ''}
-                                ${paper.scholar_url ? `<a href="${paper.scholar_url}" class="paper-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Scholar</a>` : ''}
-                            </div>
-                        </div>
-                    `;
+                    const content = document.createElement('div');
+                    content.className = 'publication-content';
 
-                    allPublicationsContainer.appendChild(paperElement);
+                    const header = document.createElement('header');
+                    header.className = 'publication-header';
+
+                    const title = document.createElement('h3');
+                    title.textContent = paper.title || '';
+                    header.appendChild(title);
+
+                    if (paper.authors && paper.authors.length) {
+                        const authors = document.createElement('p');
+                        authors.className = 'authors';
+                        authors.textContent = paper.authors.join(', ');
+                        header.appendChild(authors);
+                    }
+
+                    if (paper.venue) {
+                        const venue = document.createElement('p');
+                        venue.className = 'venue';
+                        venue.textContent = paper.venue;
+                        header.appendChild(venue);
+                    }
+
+                    content.appendChild(header);
+
+                    if (paper.note) {
+                        const note = document.createElement('p');
+                        note.className = 'note';
+                        note.textContent = paper.note;
+                        content.appendChild(note);
+                    }
+
+                    const links = [];
+                    if (paper.url) links.push({ label: 'pdf', url: paper.url });
+                    if (paper.code_url) links.push({ label: 'code', url: paper.code_url });
+                    if (paper.video_url) links.push({ label: 'video', url: paper.video_url });
+                    if (paper.website_url) links.push({ label: 'site', url: paper.website_url });
+                    if (paper.scholar_url) links.push({ label: 'scholar', url: paper.scholar_url });
+
+                    if (links.length) {
+                        const linksList = document.createElement('div');
+                        linksList.className = 'pub-links';
+                        links.forEach(link => {
+                            const a = document.createElement('a');
+                            a.href = link.url;
+                            a.textContent = link.label;
+                            a.target = '_blank';
+                            a.rel = 'noopener noreferrer';
+                            linksList.appendChild(a);
+                        });
+                        content.appendChild(linksList);
+                    }
+
+                    body.appendChild(content);
+                    paperElement.appendChild(body);
+                    list.appendChild(paperElement);
                 });
 
-                container.appendChild(allPublicationsContainer);
+                container.appendChild(list);
             } catch (error) {
                 console.error('Detailed error:', error);
                 const container = document.getElementById('publications-container');
                 if (container) {
-                    container.innerHTML = `<p style=\"color: #ff6b6b;\">Error loading publications: ${error.message}</p>`;
+                    container.innerHTML = `<p class="error-state">Error loading publications: ${error.message}</p>`;
                 }
             }
         }
 
-        // init
-        loadIntroMarkdown();
-        loadPapersFromMarkdown();
+        function initNavigation() {
+            const navItems = Array.from(document.querySelectorAll('.nav-item'));
+            const sections = Array.from(document.querySelectorAll('.terminal-section'));
+            if (!navItems.length || !sections.length) return;
 
-        // Back to top button functionality
-        const backToTopButton = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
+            const sectionMap = new Map(sections.map(section => [section.id, section]));
+            const sectionVisibility = new Map();
+
+            const setActiveNav = (targetId) => {
+                navItems.forEach(item => {
+                    const match = item.getAttribute('data-target') === targetId;
+                    item.classList.toggle('active', match);
+                });
+            };
+
+            navItems.forEach(item => {
+                const target = item.getAttribute('data-target');
+                const section = sectionMap.get(target);
+                if (!section) return;
+                item.addEventListener('click', () => {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setActiveNav(target);
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const id = entry.target.id;
+                    const ratio = entry.isIntersecting ? entry.intersectionRatio : 0;
+                    sectionVisibility.set(id, ratio);
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+
+                let currentId = sections[0].id;
+                let maxRatio = 0;
+                sectionVisibility.forEach((ratio, id) => {
+                    if (ratio > maxRatio) {
+                        maxRatio = ratio;
+                        currentId = id;
+                    }
+                });
+
+                setActiveNav(currentId);
+            }, {
+                threshold: [0.2, 0.35, 0.5, 0.65],
+            });
+
+            sections.forEach((section, index) => {
+                sectionVisibility.set(section.id, index === 0 ? 1 : 0);
+                if (index === 0) {
+                    section.classList.add('visible');
+                }
+                observer.observe(section);
+            });
+
+            setActiveNav(sections[0].id);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadIntroMarkdown();
+            loadNewsMarkdown();
+            loadPapersFromMarkdown();
+            initNavigation();
         });
     </script>
 </body>
