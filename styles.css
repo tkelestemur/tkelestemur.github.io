@@ -93,7 +93,6 @@ body {
 
 
 .contact-panel {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
