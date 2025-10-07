@@ -14,6 +14,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tarik Kelestemur — Applied Scientist. Publications, research, and projects in robotics and AI.">
     <title>Tarik Kelestemur — Applied Scientist</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tkelestemur.github.io/">
+    <meta property="og:title" content="Tarik Kelestemur — Applied Scientist">
+    <meta property="og:description" content="Publications, research, and projects in robotics and AI.">
+    <meta property="og:image" content="https://tkelestemur.github.io/tarik.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tkelestemur.github.io/">
+    <meta name="twitter:title" content="Tarik Kelestemur — Applied Scientist">
+    <meta name="twitter:description" content="Publications, research, and projects in robotics and AI.">
+    <meta name="twitter:image" content="https://tkelestemur.github.io/tarik.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -43,7 +57,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="contact-icon" href="https://linkedin.com/in/kelestemur" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a class="contact-icon" href="https://linkedin.com/in/tkelestemur" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                             <span class="sr-only">LinkedIn</span>
                         </a>
@@ -61,7 +75,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="contact-icon" href="mailto:tarik@kelestemur.com" aria-label="Email">
+                        <a class="contact-icon" href="mailto:tkelestemur@gmail.com" aria-label="Email">
                             <i class="fa-solid fa-envelope"></i>
                             <span class="sr-only">Email</span>
                         </a>
@@ -98,6 +112,10 @@
             </section>
         </main>
     </div>
+
+    <button type="button" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script>
         function parsePapersMarkdown(md) {
@@ -400,11 +418,38 @@
             setActiveNav(sections[0].id);
         }
 
+        function initBackToTop() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (!backToTopButton) return;
+
+            // Show/hide button based on scroll position
+            const toggleButton = () => {
+                if (window.scrollY > 400) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            };
+
+            // Scroll to top when clicked
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Listen for scroll events
+            window.addEventListener('scroll', toggleButton);
+            toggleButton(); // Initial check
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             loadIntroMarkdown();
             loadNewsMarkdown();
             loadPapersFromMarkdown();
             initNavigation();
+            initBackToTop();
         });
     </script>
 </body>

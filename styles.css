@@ -138,8 +138,8 @@ body {
 }
 
 .profile-photo {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -267,9 +267,9 @@ h3 {
 }
 
 .publication-figure {
-  flex: 0 0 180px;
-  max-width: 220px;
-  aspect-ratio: 4 / 3;
+  flex: 0 0 220px;
+  width: 220px;
+  height: 165px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -388,6 +388,41 @@ h3 {
   border: 0;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(95, 244, 210, 0.2);
+}
+
 
 .loading-indicator,
 .empty-state,
@@ -461,13 +496,14 @@ a:hover {
   }
 
   .profile-photo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   .publication-figure {
     flex: 1 1 100%;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
   }
 }
