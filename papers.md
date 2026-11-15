@@ -1,10 +1,18 @@
+# Expanding Spatial and Temporal Context for Robotic Imitation Learning With Scene Graphs
+Authors: Jianing Qian, Qinhe Peng, Emmanuel Panov, Leonor Fermoselle, Dinesh Jayaraman, Bernadette Bucher, Tarik Kelestemur
+Venue: CVPR 2026
+PDF: https://arxiv.org/abs/2606.01072
+Code: https://github.com/jianingq/scene-graph-robot
+Website: https://pengqinhe.github.io/Scene-Graph-CVPR2026-website/
+Figure: images/scene-graphs.png
+---
 # CuriousBot: Interactive Mobile Exploration via Actionable 3D Relational Object Graph
 Authors: Yixuan Wang, Leonor Fermoselle, Tarik Kelestemur, Jiuguang Wang, Yunzhu Li
 Venue: Under Review
 PDF: https://arxiv.org/abs/2501.13338
 Video: https://www.youtube.com/watch?v=1fK9-OrSwpQ
 Website: https://bdaiinstitute.github.io/curiousbot
-Figure: images/curiousbot.png
+Figure: images/curiousbot.jpg
 ---
 # Theia: Distilling Diverse Vision Foundation Models for Robot Learning
 Authors: Jinghuan Shang, Karl Schmeckpeper, Brandon B May, Maria Vittoria Minniti, Tarik Kelestemur, David Watkins, Laura Herlant
@@ -20,7 +28,7 @@ Note: Outstanding Paper Award Finalist at CoRL 2024
 PDF: https://arxiv.org/abs/2407.01812
 Video: https://www.youtube.com/watch?v=xIFSx_NVROU
 Website: https://equidiff.github.io/
-Figure: images/equidiff.gif
+Figure: images/equidiff.mp4
 ---
 # GenDP: 3D Semantic Fields for Category-Level Generalizable Diffusion Policy
 Authors: Yixuan Wang, Guang Yin, Binghao Huang, Tarik Kelestemur, Jiuguang Wang, Yunzhu Li
@@ -34,13 +42,13 @@ Figure: images/gendp.mp4
 Authors: Yixuan Wang, Mingtong Zhang, Zhuoran Li, Tarik Kelestemur, Katherine Rose Driggs-Campbell, Jiajun Wu, Li Fei-Fei, Yunzhu Li
 Venue: CoRL 2024
 PDF: https://arxiv.org/abs/2309.16118
-Figure: images/d3fields.gif
+Figure: images/d3fields.mp4
 ---
 # On-Robot Reinforcement Learning with Goal-Contrastive Rewards
 Authors: Ondrej Biza, Thomas Weng, Lingfeng Sun, Karl Schmeckpeper, Tarik Kelestemur, Yecheng Jason Ma, Robert Platt, Jan-Willem van de Meent, Lawson LS Wong
 Venue: ICRA 2024
 PDF: https://arxiv.org/abs/2410.19989
-Figure: images/gcr_3.gif
+Figure: images/gcr.mp4
 ---
 # Tactile Pose Estimation and Policy Learning for Unknown Object Manipulation
 Authors: Tarik Kelestemur, Robert Platt, Taskin Padir

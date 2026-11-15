@@ -5,119 +5,159 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWH1M7QYBM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);} 
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-PWH1M7QYBM');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tarik Kelestemur — Applied Scientist. Publications, research, and projects in robotics and AI.">
-    <title>Tarik Kelestemur — Applied Scientist</title>
-    
+    <meta name="description" content="Tarik Kelestemur — robotics and robot learning. Publications, research, and projects in manipulation and AI.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#eceeeb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
+    <title>Tarik Kelestemur — Robotics &amp; Robot Learning</title>
+    <link rel="canonical" href="https://kelestemur.com/">
+    <link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tkelestemur.github.io/">
-    <meta property="og:title" content="Tarik Kelestemur — Applied Scientist">
+    <meta property="og:url" content="https://kelestemur.com/">
+    <meta property="og:title" content="Tarik Kelestemur — Robotics &amp; Robot Learning">
     <meta property="og:description" content="Publications, research, and projects in robotics and AI.">
-    <meta property="og:image" content="https://tkelestemur.github.io/tarik.jpg">
-    
+    <meta property="og:image" content="https://kelestemur.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tarik Kelestemur">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://tkelestemur.github.io/">
-    <meta name="twitter:title" content="Tarik Kelestemur — Applied Scientist">
+    <meta name="twitter:url" content="https://kelestemur.com/">
+    <meta name="twitter:title" content="Tarik Kelestemur — Robotics &amp; Robot Learning">
     <meta name="twitter:description" content="Publications, research, and projects in robotics and AI.">
-    <meta name="twitter:image" content="https://tkelestemur.github.io/tarik.jpg">
+    <meta name="twitter:image" content="https://kelestemur.com/images/og-image.jpg">
+
+    <!-- Apply the saved theme before first paint -->
+    <script>
+        (function () {
+            const root = document.documentElement;
+            root.classList.add('js');
+            try {
+                const saved = localStorage.getItem('theme');
+                if (saved === 'light' || saved === 'dark') root.dataset.theme = saved;
+            } catch (err) { /* storage unavailable: follow the system theme */ }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
 </head>
 <body>
-    <div class="page">
-        <aside class="terminal-nav">
-            <div class="nav-brand">
-                <span class="prompt">tarik@kelestemur</span>
-                <span class="cursor">~</span>
-            </div>
-            <nav class="nav-menu">
-                <button type="button" class="nav-item" data-target="about"><span class="token">01</span> about</button>
-                <button type="button" class="nav-item" data-target="news"><span class="token">02</span> news</button>
-                <button type="button" class="nav-item" data-target="publications"><span class="token">03</span> publications</button>
-            </nav>
-            <div class="contact-panel">
-                <h2 class="contact-heading">contact</h2>
-                <ul class="contact-list">
-                    <li>
-                        <a class="contact-icon" href="https://github.com/tkelestemur" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                            <span class="sr-only">GitHub</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-icon" href="https://linkedin.com/in/tkelestemur" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-icon" href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <span class="sr-only">Google Scholar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-icon" href="https://twitter.com/tarikkelestemur" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="contact-icon" href="mailto:tkelestemur@gmail.com" aria-label="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span class="sr-only">Email</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
+    <a class="skip-link" href="#publications">Skip to publications</a>
 
-        <main class="terminal-main">
-            <section id="about" class="terminal-section">
-                <div class="about-wrap">
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#about" aria-label="Tarik Kelestemur, back to top">
+                <span class="brand-mark">TK</span>
+                <span class="brand-name">Tarik Kelestemur</span>
+            </a>
+            <nav class="nav-menu" aria-label="Sections">
+                <a class="nav-item" href="#about" data-target="about">About</a>
+                <a class="nav-item" href="#news" data-target="news">News</a>
+                <a class="nav-item" href="#publications" data-target="publications">Publications</a>
+            </nav>
+            <button type="button" class="theme-toggle" aria-label="Switch color theme">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero page-section">
+            <div class="hero-inner">
+                <p class="eyebrow">Robotics &middot; Robot learning</p>
+                <h1 class="hero-name">
+                    <span class="hero-name-line">Tarik</span>
+                    <span class="hero-name-line">Kelestemur</span>
+                </h1>
+                <div class="hero-about">
                     <div class="profile-photo">
-                        <img src="tarik.jpg" alt="Tarik Kelestemur">
+                        <img src="images/tarik-portrait.jpg" alt="Tarik Kelestemur" width="720" height="900">
                     </div>
                     <div class="about-body">
-                        <h1>Tarik Kelestemur</h1>
                         <div class="bio"></div>
+                        <ul class="contact-list">
+                            <li><a class="contact-link is-primary" href="mailto:tkelestemur@gmail.com">Email</a></li>
+                            <li><a class="contact-link" href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></li>
+                            <li><a class="contact-link" href="https://github.com/tkelestemur" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a class="contact-link" href="https://linkedin.com/in/tkelestemur" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a class="contact-link" href="https://twitter.com/tarikkelestemur" target="_blank" rel="noopener noreferrer">X</a></li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+                <dl class="arm-readout" aria-hidden="true">
+                    <div><dt>q1</dt><dd data-readout="q1">0.0°</dd></div>
+                    <div><dt>q2</dt><dd data-readout="q2">0.0°</dd></div>
+                    <div><dt>q3</dt><dd data-readout="q3">0.0°</dd></div>
+                    <div><dt>ee</dt><dd data-readout="ee">0.00, 0.00 m</dd></div>
+                </dl>
+            </div>
+            <div class="hero-stage" aria-hidden="true">
+                <canvas class="arm-canvas"></canvas>
+            </div>
+        </section>
 
-            <section id="news" class="terminal-section">
+        <section id="news" class="section page-section">
+            <header class="section-head">
                 <h2>News</h2>
-                <div id="news-container" class="news-feed">
-                    <div class="loading-indicator">loading log…</div>
-                </div>
-            </section>
+            </header>
+            <div id="news-container" class="news-feed">
+                <div class="loading-indicator">Loading news…</div>
+            </div>
+        </section>
 
-            <section id="publications" class="terminal-section">
+        <section id="publications" class="section page-section">
+            <header class="section-head">
                 <h2>Publications</h2>
-                <div id="publications-container" class="publication-feed">
-                    <div class="loading-indicator">loading publications…</div>
-                </div>
-            </section>
-        </main>
-    </div>
+                <p class="section-meta">
+                    <span id="publication-count"></span>
+                    <a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                </p>
+            </header>
+            <div id="publications-container" class="publication-feed">
+                <div class="loading-indicator">Loading publications…</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-name">Tarik Kelestemur</p>
+            <ul class="footer-links">
+                <li><a href="mailto:tkelestemur@gmail.com">Email</a></li>
+                <li><a href="https://scholar.google.com/citations?user=svxVZpoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></li>
+                <li><a href="https://github.com/tkelestemur" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/tkelestemur" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://twitter.com/tarikkelestemur" target="_blank" rel="noopener noreferrer">X</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <button type="button" class="back-to-top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
+        <span aria-hidden="true">&uarr;</span>
     </button>
 
     <script>
+        const OWNER_NAME = 'Tarik Kelestemur';
+
         function parsePapersMarkdown(md) {
             const sections = md.split(/\n-{3,}\n/g);
             const papers = [];
@@ -171,6 +211,29 @@
             return papers;
         }
 
+        // Year from the venue, else from an arXiv id in the PDF link (e.g. "Under Review"
+        // papers), else the paper is grouped as "Recent".
+        function getPaperYear(paper) {
+            const match = (paper.venue || '').match(/\b(?:19|20)\d{2}\b/);
+            if (match) return match[0];
+            const arxiv = (paper.url || '').match(/arxiv\.org\/(?:abs|pdf)\/(\d{2})\d{2}\.\d{4,5}/i);
+            return arxiv ? `20${arxiv[1]}` : 'Recent';
+        }
+
+        // Renders "D^3Fields" with a real superscript without going through innerHTML.
+        function appendTitleText(el, title) {
+            title.split(/(\^\d+)/).forEach(part => {
+                if (!part) return;
+                if (/^\^\d+$/.test(part)) {
+                    const sup = document.createElement('sup');
+                    sup.textContent = part.slice(1);
+                    el.appendChild(sup);
+                } else {
+                    el.appendChild(document.createTextNode(part));
+                }
+            });
+        }
+
         function createPublicationFigure(paper) {
             if (!paper.figure) return null;
             const container = document.createElement('div');
@@ -179,14 +242,21 @@
             const figurePath = paper.figure.split(/[?#]/)[0];
             const ext = figurePath.split('.').pop().toLowerCase();
 
+            // Clips fill the frame; static diagrams are shown whole on a white plate.
+            if (ext === 'mp4' || ext === 'gif') {
+                container.classList.add('is-clip');
+            }
+
             if (ext === 'mp4') {
+                // Clips load and play only while on screen (see observeClips). Each one
+                // needs a still next to it: images/name.mp4 -> images/name-poster.jpg.
                 const video = document.createElement('video');
                 video.src = paper.figure;
                 video.loop = true;
                 video.muted = true;
-                video.autoplay = true;
                 video.playsInline = true;
-                video.setAttribute('poster', 'images/default-paper-thumbnail.jpg');
+                video.preload = 'none';
+                video.setAttribute('poster', figurePath.replace(/\.mp4$/i, '-poster.jpg'));
                 video.setAttribute('aria-label', `${paper.title || 'Publication'} clip`);
                 container.appendChild(video);
             } else {
@@ -196,12 +266,97 @@
                 img.loading = 'lazy';
                 img.decoding = 'async';
                 img.onerror = () => {
+                    img.onerror = null;
                     img.src = 'images/default-paper-thumbnail.jpg';
                 };
                 container.appendChild(img);
             }
 
             return container;
+        }
+
+        function createPublicationElement(paper) {
+            const paperElement = document.createElement('article');
+            paperElement.className = 'publication reveal';
+
+            const figure = createPublicationFigure(paper);
+            if (figure) {
+                paperElement.appendChild(figure);
+            } else {
+                paperElement.classList.add('no-figure');
+            }
+
+            const content = document.createElement('div');
+            content.className = 'publication-content';
+
+            if (paper.venue) {
+                const venue = document.createElement('p');
+                venue.className = 'venue';
+                venue.textContent = paper.venue;
+                content.appendChild(venue);
+            }
+
+            const title = document.createElement('h3');
+            const primaryUrl = paper.website_url || paper.url;
+            if (primaryUrl) {
+                const titleLink = document.createElement('a');
+                titleLink.href = primaryUrl;
+                titleLink.target = '_blank';
+                titleLink.rel = 'noopener noreferrer';
+                appendTitleText(titleLink, paper.title || '');
+                title.appendChild(titleLink);
+            } else {
+                appendTitleText(title, paper.title || '');
+            }
+            content.appendChild(title);
+
+            if (paper.authors && paper.authors.length) {
+                const authors = document.createElement('p');
+                authors.className = 'authors';
+                paper.authors.forEach((author, index) => {
+                    if (index > 0) authors.appendChild(document.createTextNode(', '));
+                    if (author === OWNER_NAME) {
+                        const me = document.createElement('strong');
+                        me.className = 'me';
+                        me.textContent = author;
+                        authors.appendChild(me);
+                    } else {
+                        authors.appendChild(document.createTextNode(author));
+                    }
+                });
+                content.appendChild(authors);
+            }
+
+            if (paper.note) {
+                const note = document.createElement('p');
+                note.className = 'note';
+                note.textContent = paper.note;
+                content.appendChild(note);
+            }
+
+            const links = [];
+            if (paper.url) links.push({ label: 'paper', url: paper.url });
+            if (paper.code_url) links.push({ label: 'code', url: paper.code_url });
+            if (paper.video_url) links.push({ label: 'video', url: paper.video_url });
+            if (paper.website_url) links.push({ label: 'project', url: paper.website_url });
+            if (paper.scholar_url) links.push({ label: 'scholar', url: paper.scholar_url });
+
+            if (links.length) {
+                const linksList = document.createElement('div');
+                linksList.className = 'pub-links';
+                links.forEach(link => {
+                    const a = document.createElement('a');
+                    a.href = link.url;
+                    a.textContent = link.label;
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    linksList.appendChild(a);
+                });
+                content.appendChild(linksList);
+            }
+
+            paperElement.appendChild(content);
+            return paperElement;
         }
 
         async function loadIntroMarkdown() {
@@ -213,6 +368,10 @@
                 const md = await res.text();
                 if (window.marked) {
                     el.innerHTML = marked.parse(md);
+                    el.querySelectorAll('a[href^="http"]').forEach(a => {
+                        a.target = '_blank';
+                        a.rel = 'noopener noreferrer';
+                    });
                 } else {
                     el.textContent = md;
                 }
@@ -238,16 +397,32 @@
                 list.className = 'news-list';
                 latest.forEach(entry => {
                     const item = document.createElement('li');
-                    item.className = 'news-item';
+                    item.className = 'news-item reveal';
+
+                    // Entries look like "Oct 2024: something happened."
+                    const match = entry.match(/^([A-Za-z]{3,9}\.?\s+\d{4})\s*:\s*(.+)$/);
+                    const date = document.createElement('span');
+                    date.className = 'news-date';
+                    date.textContent = match ? match[1] : '';
+                    const text = document.createElement('span');
+                    text.className = 'news-text';
+                    const body = match ? match[2] : entry;
                     if (window.marked && window.marked.parseInline) {
-                        item.innerHTML = marked.parseInline(entry);
+                        text.innerHTML = marked.parseInline(body);
+                        text.querySelectorAll('a[href^="http"]').forEach(link => {
+                            link.target = '_blank';
+                            link.rel = 'noopener noreferrer';
+                        });
                     } else {
-                        item.textContent = entry;
+                        text.textContent = body;
                     }
+                    item.appendChild(date);
+                    item.appendChild(text);
                     list.appendChild(item);
                 });
                 container.innerHTML = '';
                 container.appendChild(list);
+                observeReveals(container);
             } catch (err) {
                 console.error('Failed to load news:', err);
                 const container = document.getElementById('news-container');
@@ -274,81 +449,46 @@
                     return;
                 }
 
+                const count = document.getElementById('publication-count');
+                if (count) count.textContent = `${papers.length} papers`;
+
+                // papers.md is reverse chronological, so consecutive papers share a year group.
+                const groups = [];
+                papers.forEach(paper => {
+                    const label = getPaperYear(paper);
+                    const last = groups[groups.length - 1];
+                    if (last && last.label === label) {
+                        last.papers.push(paper);
+                    } else {
+                        groups.push({ label, papers: [paper] });
+                    }
+                });
+
                 const list = document.createElement('div');
                 list.className = 'publications-list';
 
-                papers.forEach(paper => {
-                    const paperElement = document.createElement('article');
-                    paperElement.className = 'publication';
+                groups.forEach(group => {
+                    const groupElement = document.createElement('section');
+                    groupElement.className = 'pub-group';
+                    groupElement.setAttribute('aria-label', `${group.label} publications`);
 
-                    const body = document.createElement('div');
-                    body.className = 'publication-body';
+                    const year = document.createElement('p');
+                    year.className = 'pub-year';
+                    year.textContent = group.label;
+                    groupElement.appendChild(year);
 
-                    const figure = createPublicationFigure(paper);
-                    if (figure) {
-                        body.appendChild(figure);
-                    }
-
-                    const content = document.createElement('div');
-                    content.className = 'publication-content';
-
-                    const header = document.createElement('header');
-                    header.className = 'publication-header';
-
-                    const title = document.createElement('h3');
-                    title.textContent = paper.title || '';
-                    header.appendChild(title);
-
-                    if (paper.authors && paper.authors.length) {
-                        const authors = document.createElement('p');
-                        authors.className = 'authors';
-                        authors.textContent = paper.authors.join(', ');
-                        header.appendChild(authors);
-                    }
-
-                    if (paper.venue) {
-                        const venue = document.createElement('p');
-                        venue.className = 'venue';
-                        venue.textContent = paper.venue;
-                        header.appendChild(venue);
-                    }
-
-                    content.appendChild(header);
-
-                    if (paper.note) {
-                        const note = document.createElement('p');
-                        note.className = 'note';
-                        note.textContent = paper.note;
-                        content.appendChild(note);
-                    }
-
-                    const links = [];
-                    if (paper.url) links.push({ label: 'pdf', url: paper.url });
-                    if (paper.code_url) links.push({ label: 'code', url: paper.code_url });
-                    if (paper.video_url) links.push({ label: 'video', url: paper.video_url });
-                    if (paper.website_url) links.push({ label: 'site', url: paper.website_url });
-                    if (paper.scholar_url) links.push({ label: 'scholar', url: paper.scholar_url });
-
-                    if (links.length) {
-                        const linksList = document.createElement('div');
-                        linksList.className = 'pub-links';
-                        links.forEach(link => {
-                            const a = document.createElement('a');
-                            a.href = link.url;
-                            a.textContent = link.label;
-                            a.target = '_blank';
-                            a.rel = 'noopener noreferrer';
-                            linksList.appendChild(a);
-                        });
-                        content.appendChild(linksList);
-                    }
-
-                    body.appendChild(content);
-                    paperElement.appendChild(body);
-                    list.appendChild(paperElement);
+                    const groupList = document.createElement('div');
+                    groupList.className = 'pub-group-list';
+                    group.papers.forEach(paper => {
+                        groupList.appendChild(createPublicationElement(paper));
+                    });
+                    groupElement.appendChild(groupList);
+                    list.appendChild(groupElement);
                 });
 
                 container.appendChild(list);
+                observeReveals(container);
+                observeClips(container);
             } catch (error) {
                 console.error('Detailed error:', error);
                 const container = document.getElementById('publications-container');
@@ -358,64 +498,125 @@
             }
         }
 
-        function initNavigation() {
-            const navItems = Array.from(document.querySelectorAll('.nav-item'));
-            const sections = Array.from(document.querySelectorAll('.terminal-section'));
-            if (!navItems.length || !sections.length) return;
+        // Fades rows in as they enter the viewport. Rows stay visible if observers are unavailable.
+        let revealObserver = null;
 
-            const sectionMap = new Map(sections.map(section => [section.id, section]));
-            const sectionVisibility = new Map();
+        function observeReveals(scope) {
+            const items = scope.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                items.forEach(item => item.classList.add('is-in'));
+                return;
+            }
+            if (!revealObserver) {
+                revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('is-in');
+                        revealObserver.unobserve(entry.target);
+                    });
+                }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+            }
+            items.forEach(item => revealObserver.observe(item));
+        }
+
+        // Plays publication clips while they are on screen and pauses them when they leave.
+        let clipObserver = null;
+
+        function observeClips(scope) {
+            const clips = scope.querySelectorAll('.publication-figure video');
+            if (!clips.length) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                clips.forEach(clip => { clip.controls = true; });
+                return;
+            }
+            if (!('IntersectionObserver' in window)) {
+                clips.forEach(clip => { clip.play().catch(() => {}); });
+                return;
+            }
+            if (!clipObserver) {
+                clipObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.play().catch(() => {});
+                        } else {
+                            entry.target.pause();
+                        }
+                    });
+                }, { rootMargin: '200px 0px' });
+            }
+            clips.forEach(clip => clipObserver.observe(clip));
+        }
+
+        function initNavigation() {
+            const header = document.querySelector('.site-nav');
+            const navItems = Array.from(document.querySelectorAll('.nav-item'));
+            const sections = Array.from(document.querySelectorAll('.page-section'));
+            if (!navItems.length || !sections.length) return;
 
             const setActiveNav = (targetId) => {
                 navItems.forEach(item => {
                     const match = item.getAttribute('data-target') === targetId;
                     item.classList.toggle('active', match);
+                    if (match) {
+                        item.setAttribute('aria-current', 'true');
+                    } else {
+                        item.removeAttribute('aria-current');
+                    }
                 });
             };
 
-            navItems.forEach(item => {
-                const target = item.getAttribute('data-target');
-                const section = sectionMap.get(target);
-                if (!section) return;
-                item.addEventListener('click', () => {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    setActiveNav(target);
-                });
-            });
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const id = entry.target.id;
-                    const ratio = entry.isIntersecting ? entry.intersectionRatio : 0;
-                    sectionVisibility.set(id, ratio);
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-
-                let currentId = sections[0].id;
-                let maxRatio = 0;
-                sectionVisibility.forEach((ratio, id) => {
-                    if (ratio > maxRatio) {
-                        maxRatio = ratio;
-                        currentId = id;
-                    }
-                });
-
-                setActiveNav(currentId);
-            }, {
-                threshold: [0.2, 0.35, 0.5, 0.65],
-            });
-
-            sections.forEach((section, index) => {
-                sectionVisibility.set(section.id, index === 0 ? 1 : 0);
-                if (index === 0) {
-                    section.classList.add('visible');
-                }
-                observer.observe(section);
-            });
-
             setActiveNav(sections[0].id);
+            if (!('IntersectionObserver' in window)) return;
+
+            // The active section is whichever one crosses a line 40% down the viewport.
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) setActiveNav(entry.target.id);
+                });
+            }, { rootMargin: '-40% 0px -60% 0px', threshold: 0 });
+            sections.forEach(section => sectionObserver.observe(section));
+
+            // Show the name in the nav once the large one has scrolled away.
+            const heroName = document.querySelector('.hero-name');
+            if (header && heroName) {
+                const nameObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        header.classList.toggle('is-scrolled', !entry.isIntersecting);
+                    });
+                }, { rootMargin: '-56px 0px 0px 0px', threshold: 0 });
+                nameObserver.observe(heroName);
+            }
+        }
+
+        function initTheme() {
+            const root = document.documentElement;
+            const toggle = document.querySelector('.theme-toggle');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+            if (!toggle) return;
+
+            const currentTheme = () => root.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+
+            const syncLabel = () => {
+                const next = currentTheme() === 'dark' ? 'light' : 'dark';
+                toggle.setAttribute('aria-label', `Switch to ${next} theme`);
+            };
+
+            const announce = () => {
+                syncLabel();
+                window.dispatchEvent(new CustomEvent('themechange'));
+            };
+
+            toggle.addEventListener('click', () => {
+                const next = currentTheme() === 'dark' ? 'light' : 'dark';
+                root.dataset.theme = next;
+                try {
+                    localStorage.setItem('theme', next);
+                } catch (err) { /* theme still applies for this visit */ }
+                announce();
+            });
+
+            systemDark.addEventListener('change', announce);
+            syncLabel();
         }
 
         function initBackToTop() {
@@ -423,8 +624,10 @@
             if (!backToTopButton) return;
 
             // Show/hide button based on scroll position
+            // Hidden near the bottom so it never covers the footer links
             const toggleButton = () => {
-                if (window.scrollY > 400) {
+                const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 120;
+                if (window.scrollY > 600 && !nearBottom) {
                     backToTopButton.classList.add('visible');
                 } else {
                     backToTopButton.classList.remove('visible');
@@ -433,23 +636,444 @@
 
             // Scroll to top when clicked
             backToTopButton.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
             // Listen for scroll events
-            window.addEventListener('scroll', toggleButton);
+            window.addEventListener('scroll', toggleButton, { passive: true });
             toggleButton(); // Initial check
         }
 
+        // Hero figure: a planar 3-joint arm that reaches for the pointer. The thin lines
+        // between gripper and target are sampled trajectories that collapse as it arrives.
+        function initArm() {
+            const hero = document.querySelector('.hero');
+            const canvas = document.querySelector('.arm-canvas');
+            const stage = document.querySelector('.hero-stage');
+            const keepOut = document.querySelector('.hero-about');
+            if (!hero || !canvas || !stage || !canvas.getContext) return;
+
+            const ctx = canvas.getContext('2d');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const readout = {};
+            document.querySelectorAll('[data-readout]').forEach(el => {
+                readout[el.dataset.readout] = el;
+            });
+
+            const CONTENT_MAX = 1240;      // matches --page-max
+            const REACH_METERS = 0.85;     // scale used for the readout only
+            const JOINT_RATES = [5.5, 7, 9];
+            const IDLE_MS = 3500;
+            const PATH_STEPS = 22;
+            const PALM_OFFSET = 16;        // gripper palm sits this far behind the fingertips
+            // Idle goals as [fraction of reach, position across the reachable arc].
+            const GOALS = [[0.86, 0.28], [0.52, 0.62], [0.93, 0.74], [0.62, 0.08], [0.78, 0.46], [0.5, 0.9], [0.95, 0.4]];
+            const samples = Array.from({ length: 9 }, (_, k) => ({
+                phaseA: k * 2.399,
+                phaseB: k * 1.618 + 0.5,
+                speedA: 0.9 + (k % 3) * 0.35,
+                speedB: 1.3 + (k % 4) * 0.28,
+                gain: (k % 2 ? 1 : -1) * (0.45 + ((k * 7) % 5) * 0.14),
+            }));
+
+            let width = 0;
+            let height = 0;
+            let dpr = 1;
+            let geo = null;
+            let colors = {};
+            let target = { x: 0, y: 0 };
+            const q = [-2.2, -0.5, 0.9];   // absolute link angles, canvas convention (y down)
+            let elbowSign = 1;
+            let pointerActive = false;
+            let lastPointer = 0;
+            let nextGoalAt = 0;
+            let goalIndex = 0;
+            let visible = true;
+            let rafId = 0;
+            let lastTime = 0;
+
+            const wrap = (a) => Math.atan2(Math.sin(a), Math.cos(a));
+            const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+            const readColors = () => {
+                const styles = getComputedStyle(canvas);
+                colors = {
+                    ink: styles.getPropertyValue('--ink').trim() || '#121416',
+                    bg: styles.getPropertyValue('--bg').trim() || '#eceeeb',
+                    accent: styles.getPropertyValue('--accent').trim() || '#f04e0b',
+                };
+            };
+
+            const clampTarget = (x, y) => {
+                const { sx, sy, reach, floorY, unit, compact } = geo;
+                let px = x;
+                // Keep the arm out of the bio column on wide layouts.
+                if (!compact && keepOut) {
+                    const zone = keepOut.getBoundingClientRect();
+                    const box = canvas.getBoundingClientRect();
+                    const top = zone.top - box.top - 24;
+                    const bottom = zone.bottom - box.top + 48;
+                    const right = zone.right - box.left + 40;
+                    if (y > top && y < bottom && px < right) px = right;
+                }
+                const dx = px - sx;
+                const dy = Math.min(y, floorY - 16 * unit) - sy;
+                const d = Math.hypot(dx, dy) || 1;
+                const c = clamp(d, reach * 0.3, reach * 0.97);
+                return {
+                    x: clamp(sx + dx / d * c, 12, width - 12),
+                    y: Math.min(sy + dy / d * c, floorY - 8 * unit),
+                };
+            };
+
+            const pickGoal = (now) => {
+                const [radius, across] = GOALS[goalIndex % GOALS.length];
+                goalIndex += 1;
+                const span = geo.compact ? [3.45, 5.95] : [3.3, 5.0];
+                const angle = span[0] + (span[1] - span[0]) * across;
+                target = clampTarget(
+                    geo.sx + Math.cos(angle) * geo.reach * radius,
+                    geo.sy + Math.sin(angle) * geo.reach * radius
+                );
+                nextGoalAt = now + 2300 + (goalIndex % 3) * 500;
+            };
+
+            const layout = () => {
+                const rect = canvas.getBoundingClientRect();
+                if (!rect.width || !rect.height) return;
+                width = rect.width;
+                height = rect.height;
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvas.width = Math.round(width * dpr);
+                canvas.height = Math.round(height * dpr);
+
+                // Narrow layouts stack the stage under the text instead of behind it.
+                const compact = getComputedStyle(stage).position !== 'absolute';
+                const contentWidth = Math.min(width, CONTENT_MAX);
+                const contentLeft = (width - contentWidth) / 2;
+                const floorY = height;
+                const reach = compact
+                    ? Math.min(width * 0.44, (height - 36) * 0.9)
+                    : Math.min(contentWidth * 0.37, (height - 96) * 0.78);
+                geo = {
+                    compact,
+                    floorY,
+                    reach,
+                    unit: Math.max(reach / 380, 0.55),
+                    sx: compact ? width / 2 : contentLeft + contentWidth * 0.79,
+                    sy: floorY - reach * 0.14,
+                    l1: reach * 0.42,
+                    l2: reach * 0.36,
+                    l3: reach * 0.22,
+                };
+                pickGoal(performance.now());
+                if (reduceMotion.matches) settle();
+                render(performance.now());
+            };
+
+            // Analytic IK: a wrist pose from the approach direction, then a two-link solve.
+            const solve = () => {
+                const { sx, sy, l1, l2, l3 } = geo;
+                let ux = target.x - sx;
+                let uy = target.y - sy;
+                const ul = Math.hypot(ux, uy) || 1;
+                ux /= ul;
+                uy = uy / ul + 0.45;   // approach slightly from above
+                const phi = Math.atan2(uy, ux);
+                const wx = target.x - Math.cos(phi) * l3;
+                const wy = target.y - Math.sin(phi) * l3;
+                const dx = wx - sx;
+                const dy = wy - sy;
+                const d = clamp(Math.hypot(dx, dy), Math.abs(l1 - l2) + 1, l1 + l2 - 1);
+                const a = Math.atan2(dy, dx);
+                const b = Math.acos(clamp((l1 * l1 + d * d - l2 * l2) / (2 * l1 * d), -1, 1));
+                // Prefer the elbow-up branch, with hysteresis so it does not chatter overhead.
+                const below = Math.sin(a - b);
+                const above = Math.sin(a + b);
+                const preferred = below < above ? -1 : 1;
+                if (preferred !== elbowSign && Math.abs(below - above) > 0.25) elbowSign = preferred;
+                const t1 = a + elbowSign * b;
+                const ex = sx + Math.cos(t1) * l1;
+                const ey = sy + Math.sin(t1) * l1;
+                const t2 = Math.atan2(sy + Math.sin(a) * d - ey, sx + Math.cos(a) * d - ex);
+                return [t1, t2, phi];
+            };
+
+            const forward = () => {
+                const { sx, sy, l1, l2, l3 } = geo;
+                const elbow = { x: sx + Math.cos(q[0]) * l1, y: sy + Math.sin(q[0]) * l1 };
+                const wrist = { x: elbow.x + Math.cos(q[1]) * l2, y: elbow.y + Math.sin(q[1]) * l2 };
+                const tip = { x: wrist.x + Math.cos(q[2]) * l3, y: wrist.y + Math.sin(q[2]) * l3 };
+                return { elbow, wrist, tip };
+            };
+
+            const settle = () => {
+                const goal = solve();
+                goal.forEach((angle, i) => { q[i] = angle; });
+            };
+
+            const step = (dt) => {
+                const goal = solve();
+                goal.forEach((angle, i) => {
+                    q[i] += wrap(angle - q[i]) * (1 - Math.exp(-dt * JOINT_RATES[i]));
+                });
+            };
+
+            const capsule = (from, to, thickness) => {
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+                ctx.moveTo(from.x, from.y);
+                ctx.lineTo(to.x, to.y);
+                ctx.strokeStyle = colors.ink;
+                ctx.lineWidth = thickness;
+                ctx.stroke();
+                ctx.strokeStyle = colors.bg;
+                ctx.lineWidth = Math.max(thickness - 4, 1);
+                ctx.stroke();
+            };
+
+            const joint = (point, radius) => {
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = colors.bg;
+                ctx.fill();
+                ctx.strokeStyle = colors.ink;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, Math.max(radius * 0.3, 1.2), 0, Math.PI * 2);
+                ctx.fillStyle = colors.ink;
+                ctx.fill();
+            };
+
+            const drawWorkspace = () => {
+                const { sx, sy, reach, unit } = geo;
+                ctx.save();
+                ctx.strokeStyle = colors.ink;
+                ctx.lineWidth = 1;
+                ctx.globalAlpha = 0.28;
+                ctx.setLineDash([2, 6]);
+                ctx.beginPath();
+                ctx.arc(sx, sy, reach, Math.PI * 0.96, Math.PI * 2.04);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                for (let deg = 180; deg <= 360; deg += 15) {
+                    const a = deg * Math.PI / 180;
+                    const inner = reach - (deg % 45 === 0 ? 9 : 5) * unit;
+                    ctx.beginPath();
+                    ctx.moveTo(sx + Math.cos(a) * inner, sy + Math.sin(a) * inner);
+                    ctx.lineTo(sx + Math.cos(a) * reach, sy + Math.sin(a) * reach);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            };
+
+            const drawPlan = (tip, seconds) => {
+                const dx = target.x - tip.x;
+                const dy = target.y - tip.y;
+                const dist = Math.hypot(dx, dy);
+                const { unit } = geo;
+
+                if (dist > 3) {
+                    const nx = -dy / dist;
+                    const ny = dx / dist;
+                    const spread = dist * 0.2;
+                    ctx.save();
+                    ctx.strokeStyle = colors.ink;
+                    ctx.lineWidth = 1;
+                    ctx.globalAlpha = 0.24;
+                    samples.forEach(sample => {
+                        ctx.beginPath();
+                        for (let i = 0; i <= PATH_STEPS; i += 1) {
+                            const u = i / PATH_STEPS;
+                            const noise = Math.sin(u * 5.2 + sample.phaseA + seconds * sample.speedA) * 0.65
+                                + Math.sin(u * 11.7 + sample.phaseB - seconds * sample.speedB) * 0.35;
+                            const offset = spread * Math.sin(Math.PI * u) * noise * sample.gain;
+                            const x = tip.x + dx * u + nx * offset;
+                            const y = tip.y + dy * u + ny * offset;
+                            if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+                        }
+                        ctx.stroke();
+                    });
+                    ctx.restore();
+
+                    ctx.strokeStyle = colors.accent;
+                    ctx.fillStyle = colors.accent;
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(tip.x, tip.y);
+                    ctx.lineTo(target.x, target.y);
+                    ctx.stroke();
+                    if (dist > 60 * unit) {
+                        [0.25, 0.5, 0.75].forEach(u => {
+                            ctx.beginPath();
+                            ctx.arc(tip.x + dx * u, tip.y + dy * u, 2.2, 0, Math.PI * 2);
+                            ctx.fill();
+                        });
+                    }
+                }
+
+                // Target reticle
+                const r = Math.max(7 * unit, 5);
+                ctx.strokeStyle = colors.accent;
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.arc(target.x, target.y, r, 0, Math.PI * 2);
+                ctx.stroke();
+                ctx.beginPath();
+                [[1, 0], [-1, 0], [0, 1], [0, -1]].forEach(([cx, cy]) => {
+                    ctx.moveTo(target.x + cx * r * 0.55, target.y + cy * r * 0.55);
+                    ctx.lineTo(target.x + cx * r * 1.7, target.y + cy * r * 1.7);
+                });
+                ctx.stroke();
+                return dist;
+            };
+
+            const drawBase = () => {
+                const { sx, sy, floorY, unit } = geo;
+                ctx.fillStyle = colors.bg;
+                ctx.strokeStyle = colors.ink;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(sx - 38 * unit, floorY - 8 * unit);
+                ctx.lineTo(sx - 19 * unit, sy);
+                ctx.lineTo(sx + 19 * unit, sy);
+                ctx.lineTo(sx + 38 * unit, floorY - 8 * unit);
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+                ctx.fillStyle = colors.ink;
+                ctx.fillRect(sx - 56 * unit, floorY - 8 * unit, 112 * unit, 8 * unit);
+            };
+
+            const drawGripper = (tip, opening) => {
+                const { unit } = geo;
+                const dirX = Math.cos(q[2]);
+                const dirY = Math.sin(q[2]);
+                const palm = { x: tip.x - dirX * PALM_OFFSET * unit, y: tip.y - dirY * PALM_OFFSET * unit };
+                const half = (6 + 11 * opening) * unit;
+                const px = -dirY * half;
+                const py = dirX * half;
+                ctx.strokeStyle = colors.accent;
+                ctx.lineWidth = Math.max(4.5 * unit, 2.5);
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                ctx.beginPath();
+                ctx.moveTo(tip.x + px + dirX * 3 * unit, tip.y + py + dirY * 3 * unit);
+                ctx.lineTo(palm.x + px, palm.y + py);
+                ctx.lineTo(palm.x - px, palm.y - py);
+                ctx.lineTo(tip.x - px + dirX * 3 * unit, tip.y - py + dirY * 3 * unit);
+                ctx.stroke();
+            };
+
+            const updateReadout = (tip) => {
+                const { sx, floorY, reach } = geo;
+                const deg = (a) => `${(wrap(a) * 180 / Math.PI).toFixed(1)}°`;
+                if (readout.q1) readout.q1.textContent = deg(-q[0]);
+                if (readout.q2) readout.q2.textContent = deg(-(q[1] - q[0]));
+                if (readout.q3) readout.q3.textContent = deg(-(q[2] - q[1]));
+                if (readout.ee) {
+                    const x = (tip.x - sx) / reach * REACH_METERS;
+                    const z = (floorY - tip.y) / reach * REACH_METERS;
+                    readout.ee.textContent = `${x.toFixed(2)}, ${z.toFixed(2)} m`;
+                }
+            };
+
+            const render = (now) => {
+                if (!geo) return;
+                const { sx, sy, unit, reach } = geo;
+                const { elbow, wrist, tip } = forward();
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                ctx.clearRect(0, 0, width, height);
+                drawWorkspace();
+                const dist = drawPlan(tip, reduceMotion.matches ? 0 : now / 1000);
+                drawBase();
+                capsule({ x: sx, y: sy }, elbow, 32 * unit);
+                capsule(elbow, wrist, 25 * unit);
+                capsule(wrist, {
+                    x: tip.x - Math.cos(q[2]) * PALM_OFFSET * unit,
+                    y: tip.y - Math.sin(q[2]) * PALM_OFFSET * unit,
+                }, 18 * unit);
+                joint({ x: sx, y: sy }, 10.5 * unit);
+                joint(elbow, 8.5 * unit);
+                joint(wrist, 6.5 * unit);
+                drawGripper(tip, clamp(dist / (reach * 0.3), 0, 1));
+                updateReadout(tip);
+            };
+
+            const frame = (now) => {
+                rafId = 0;
+                const dt = Math.min((now - lastTime) / 1000, 0.05);
+                lastTime = now;
+                const idle = !pointerActive || now - lastPointer > IDLE_MS;
+                if (idle && now >= nextGoalAt) pickGoal(now);
+                step(dt);
+                render(now);
+                schedule();
+            };
+
+            const schedule = () => {
+                if (rafId || !visible || reduceMotion.matches || !geo) return;
+                rafId = requestAnimationFrame(frame);
+            };
+
+            hero.addEventListener('pointermove', (event) => {
+                if (!geo || reduceMotion.matches) return;
+                const rect = canvas.getBoundingClientRect();
+                target = clampTarget(event.clientX - rect.left, event.clientY - rect.top);
+                pointerActive = true;
+                lastPointer = performance.now();
+            }, { passive: true });
+
+            hero.addEventListener('pointerleave', () => {
+                pointerActive = false;
+                nextGoalAt = performance.now() + 700;
+            });
+
+            if ('IntersectionObserver' in window) {
+                const visibilityObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        visible = entry.isIntersecting;
+                        if (visible) {
+                            lastTime = performance.now();
+                            schedule();
+                        }
+                    });
+                });
+                visibilityObserver.observe(canvas);
+            }
+
+            if ('ResizeObserver' in window) {
+                new ResizeObserver(layout).observe(canvas);
+            } else {
+                window.addEventListener('resize', layout);
+            }
+
+            window.addEventListener('themechange', () => {
+                readColors();
+                render(performance.now());
+            });
+
+            reduceMotion.addEventListener('change', () => {
+                if (reduceMotion.matches) settle();
+                render(performance.now());
+                schedule();
+            });
+
+            readColors();
+            layout();
+            lastTime = performance.now();
+            schedule();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
             loadIntroMarkdown();
             loadNewsMarkdown();
             loadPapersFromMarkdown();
             initNavigation();
             initBackToTop();
+            initArm();
         });
     </script>
 </body>
